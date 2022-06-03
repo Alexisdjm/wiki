@@ -1,0 +1,23 @@
+{% extends "encyclopediaTP/layout.html" %}
+
+{% block title %}
+    New Wiki
+{% endblock %}
+
+{% block body %}
+<meta charset="utf-8" />
+    <h1>NEW WIKI</h1>
+    <form action="{% url 'save' %}" method="post">
+        {% csrf_token %}
+        <label>Titulo:</label>
+        <input type="text" name="input"></input>
+        <br>
+        <br>
+        <label>Contenido:</label>
+        <textarea style="height: 300px" name="textarea"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Guardar">
+    </form>
+   
+{% endblock %}

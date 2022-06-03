@@ -1,0 +1,1 @@
+Django is a Python based free and open source web framework that follows the model template views (MTV) architectural pattern. It is maintained by the Django Software Foundation (DSF), an independent organization established in the US as a 501(c)(3) non profit.

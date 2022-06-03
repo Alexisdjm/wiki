@@ -1,0 +1,23 @@
+{% extends "encyclopediaTP/layout.html" %}
+
+{% block title %}
+    Search Result | {{ query }}
+{% endblock %}
+
+{% block body %}
+    {% if encontrado %}
+        <h1>Resultados de busqueda</h1>
+        <hr style="color:black">
+    <br>
+        <ul>
+            {% for r in resultado %}
+                <li><a href="{% url 'wiki_entry' r %}">{{ r }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <h1 style="color:red">No hay resultados :(</h1>
+
+    {% endif %}
+    
+    
+{% endblock %}
